@@ -1,4 +1,4 @@
-package br.monteoliva.mobilechallengeandroid.view
+package br.monteoliva.mobilechallengeandroid.ui.feature
 
 import android.os.Bundle
 import android.view.KeyEvent

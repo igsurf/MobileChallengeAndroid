@@ -1,4 +1,4 @@
-package br.monteoliva.mobilechallengeandroid.view.main
+package br.monteoliva.mobilechallengeandroid.ui.feature.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
