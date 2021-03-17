@@ -5,7 +5,7 @@ import okhttp3.Response
 
 import br.monteoliva.mobilechallengeandroid.repository.core.Constants
 
-class ServiceInterceptor : Interceptor{
+class MicroServiceInterceptor : Interceptor{
     override fun intercept(chain: Interceptor.Chain): Response {
         var request = chain.request()
 

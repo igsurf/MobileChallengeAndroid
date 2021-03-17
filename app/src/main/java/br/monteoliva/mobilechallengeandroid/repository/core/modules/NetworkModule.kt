@@ -11,7 +11,7 @@ import br.monteoliva.mobilechallengeandroid.repository.core.preferences.Preferen
 import br.monteoliva.mobilechallengeandroid.repository.core.preferences.SharedPreferencesImpl
 import br.monteoliva.mobilechallengeandroid.repository.core.RetrofitMobile
 import br.monteoliva.mobilechallengeandroid.repository.core.OkHttp3
-import br.monteoliva.mobilechallengeandroid.repository.core.ServiceInterceptor
+import br.monteoliva.mobilechallengeandroid.repository.core.MicroServiceInterceptor
 
 var networkModule = module {
     single<Preferences> { SharedPreferencesImpl(androidContext()) }
@@ -19,6 +19,6 @@ var networkModule = module {
     single {(get() as Retrofit).create(ApiService::class.java) }
 
     factory { OkHttp3(get()) }
-    factory { ServiceInterceptor() }
+    factory { MicroServiceInterceptor() }
     factory { RepositoryServer(get()) }
 }
