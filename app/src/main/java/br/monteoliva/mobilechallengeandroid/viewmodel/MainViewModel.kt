@@ -1,11 +1,10 @@
 package br.monteoliva.mobilechallengeandroid.viewmodel
 
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-import br.monteoliva.mobilechallengeandroid.core.api.ApiRepositoryServer
+import br.monteoliva.mobilechallengeandroid.repository.core.RepositoryServer
 
-class MainViewModel(private val apiRetrofitResponse: ApiRepositoryServer) : ViewModel() {
+class MainViewModel(private val repositoryServer: RepositoryServer) : ViewModel() {
 //    var myBalance: MutableLiveData<Balance> = MutableLiveData()
 //    var myStatements: MutableLiveData<Boolean> = MutableLiveData()
 //
@@ -25,7 +24,7 @@ class MainViewModel(private val apiRetrofitResponse: ApiRepositoryServer) : View
 //    }
 //
 //    private fun loadList(offset: Int, isFirst: Boolean) {
-//        apiRetrofitResponse.getStatements(offset) { items ->
+//        repositoryServer.getStatements(offset) { items ->
 //            items.items?.let {
 //                itemsList.addAll(it)
 //            }

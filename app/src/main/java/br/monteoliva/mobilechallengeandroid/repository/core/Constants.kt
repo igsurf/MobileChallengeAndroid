@@ -1,4 +1,4 @@
-package br.monteoliva.mobilechallengeandroid.core
+package br.monteoliva.mobilechallengeandroid.repository.core
 
 object Constants {
     const val API_URL = "https://desafio-mobile-bff.herokuapp.com"

@@ -1,4 +1,4 @@
-package br.monteoliva.mobilechallengeandroid.core.preferences
+package br.monteoliva.mobilechallengeandroid.repository.core.preferences
 
 interface Preferences {
     fun getValue(key: String, defaultValue: String) : String

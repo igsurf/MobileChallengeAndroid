@@ -1,4 +1,4 @@
-package br.monteoliva.mobilechallengeandroid.core.extensions
+package br.monteoliva.mobilechallengeandroid.repository.core.extensions
 
 import androidx.appcompat.app.AppCompatActivity
 

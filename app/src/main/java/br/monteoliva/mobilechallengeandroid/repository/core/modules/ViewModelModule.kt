@@ -1,4 +1,4 @@
-package br.monteoliva.mobilechallengeandroid.core.modules
+package br.monteoliva.mobilechallengeandroid.repository.core.modules
 
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module

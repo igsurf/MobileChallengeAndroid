@@ -1,4 +1,4 @@
-package br.monteoliva.mobilechallengeandroid.core.preferences
+package br.monteoliva.mobilechallengeandroid.repository.core.preferences
 
 import android.content.Context
 import androidx.preference.PreferenceManager

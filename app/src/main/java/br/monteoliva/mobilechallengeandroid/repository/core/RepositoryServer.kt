@@ -1,11 +1,9 @@
-package br.monteoliva.mobilechallengeandroid.core.api
+package br.monteoliva.mobilechallengeandroid.repository.core
 
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
+import br.monteoliva.mobilechallengeandroid.repository.api.ApiService
 
 
-class ApiRepositoryServer(private val apiService: ApiService) {
+class RepositoryServer(private val apiService: ApiService) {
 //    fun getBalance(callback: (Balance) -> Unit) {
 //        apiService.getBalance().apply {
 //            enqueue(object: Callback<Balance> {
