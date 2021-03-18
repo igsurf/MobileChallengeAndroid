@@ -1,42 +1,40 @@
 package br.monteoliva.mobilechallengeandroid.repository.core
 
-import br.monteoliva.mobilechallengeandroid.repository.api.ApiService
+import android.util.Log
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
+import br.monteoliva.mobilechallengeandroid.repository.api.ApiService
+import br.monteoliva.mobilechallengeandroid.repository.model.contracts.pulls.PullsItem
+import br.monteoliva.mobilechallengeandroid.repository.model.contracts.repos.Repos
 
 class RepositoryServer(private val apiService: ApiService) {
-//    fun getBalance(callback: (Balance) -> Unit) {
-//        apiService.getBalance().apply {
-//            enqueue(object: Callback<Balance> {
-//                override fun onResponse(call: Call<Balance>, response: Response<Balance>) {
-//                    response.body()?.let { callback.invoke(it) }
-//                }
-//
-//                override fun onFailure(call: Call<Balance>, t: Throwable) {}
-//            })
-//        }
-//    }
-//
-//    fun getStatements(offset: Int, callback: (Statements) -> Unit) {
-//        apiService.getStatement(10, offset).apply {
-//            enqueue(object: Callback<Statements> {
-//                override fun onResponse(call: Call<Statements>, response: Response<Statements>) {
-//                    response.body()?.let { callback.invoke(it) }
-//                }
-//
-//                override fun onFailure(call: Call<Statements>, t: Throwable) {}
-//            })
-//        }
-//    }
-//
-//    fun getDetail(id: String, callback: (Detail) -> Unit) {
-//        apiService.getDetail(id).apply {
-//            enqueue(object: Callback<Detail> {
-//                override fun onResponse(call: Call<Detail>, response: Response<Detail>) {
-//                    response.body()?.let { callback.invoke(it) }
-//                }
-//
-//                override fun onFailure(call: Call<Detail>, t: Throwable) {}
-//            })
-//        }
-//    }
+    fun getRepositories(callback: (Repos) -> Unit) {
+        apiService.getRepositories("language:Java", "stars", 1).apply {
+            enqueue(object: Callback<Repos> {
+                override fun onResponse(call: Call<Repos>, response: Response<Repos>) {
+                    response.body()?.let { callback.invoke(it) }
+                }
+
+                override fun onFailure(call: Call<Repos>, t: Throwable) {
+                }
+            })
+        }
+    }
+
+    fun getPulls(owner: String, repo: String, callback: (MutableList<PullsItem>) -> Unit) {
+        apiService.getPulls(owner, repo).apply {
+            enqueue(object: Callback<MutableList<PullsItem>> {
+                override fun onResponse(call: Call<MutableList<PullsItem>>, response: Response<MutableList<PullsItem>>) {
+                    response.body()?.let { callback.invoke(it) }
+                }
+
+                override fun onFailure(call: Call<MutableList<PullsItem>>, t: Throwable) {
+                }
+            })
+        }
+    }
+
+
 }

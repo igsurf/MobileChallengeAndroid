@@ -12,8 +12,9 @@ buildscript {
         retrofit_version = "2.9.0"
         okhttp_version = "4.9.0"
         okhttp_digest_version = "1.18"
-        glide_version = "3.1.0"
-    }
+        circle_version = "3.1.0"
+        glide_version = '4.11.0'
+7   }
     repositories {
         google()
         jcenter()

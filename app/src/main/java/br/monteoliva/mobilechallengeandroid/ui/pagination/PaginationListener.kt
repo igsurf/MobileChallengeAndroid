@@ -1,10 +1,10 @@
 package br.monteoliva.mobilechallengeandroid.ui.pagination
 
-import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.OnScrollListener
 
-abstract class PaginationListener(var layoutManager: GridLayoutManager) : OnScrollListener() {
+abstract class PaginationListener(var layoutManager: LinearLayoutManager) : OnScrollListener() {
     override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
         super.onScrolled(recyclerView, dx, dy)
 

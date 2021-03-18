@@ -8,11 +8,9 @@ import androidx.annotation.StringRes
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
-
-import br.monteoliva.mobilechallengeandroid.repository.core.extensions.leftToRight
-import br.monteoliva.mobilechallengeandroid.repository.core.extensions.rightToLeft
-import br.monteoliva.mobilechallengeandroid.repository.core.extensions.topToBottom
-import br.monteoliva.mobilechallengeandroid.repository.core.extensions.bottomToTop
+import androidx.core.content.ContextCompat
+import br.monteoliva.mobilechallengeandroid.R
+import br.monteoliva.mobilechallengeandroid.repository.core.extensions.*
 
 abstract class BaseActivity(@LayoutRes private val resource: Int) : AppCompatActivity() {
     private var actionBar: ActionBar? = null
