@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MobileChallengeAndroid</string>
+    <string name="title_main">GitHub JavaPop</string>
+    <string name="title_opened">{0} opened</string>
+    <string name="title_closed">{0} closed</string>
+    <string name="title_divider">/</string>
+</resources>
